@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	
+    <title>Título de ejemplo</title>
+  </head>
+  <body>
+    <p>¡Esta es mi web!</p>
+	
+	<div id="alveol">
+		{{ message }}
+		
+		<ul>
+			<li v-for="procesador of procesadores">
+					{{procesador}}
+			</li>
+		</ul>
+
+	</div>
+
+	
+	
+	<div id="app-3">
+		<span v-if="seen">Now you see me</span>
+		<p>Using mustaches: {{ rawHtml }}</p>
+		<p>Using v-html directive: <div v-html="rawHtml"></div></p>
+		<button v-bind:disabled="isButtonDisabled">Button</button>
+		<button :disabled="isButtonDisabled">Button Shortcut</button>
+		<h1 v-bind:style="estilo">This is a header</h1>
+		<a v-bind:[atributo]="parametro" >This is a link</a>
+		<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">
+			<p>Original message: "{{ message }}"</p>
+	   </div>
+	   <div class="static" v-bind:class="classObject">
+			<p>Computed reversed message: "{{ mensageAlReves }}"</p>
+		</div>
+		<div class="static" v-bind:class="classObject2">
+			<p>Computed HOUR: "{{ now }}"</p>
+		</div>
+		<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">
+			<p>Method HOUR: "{{ now }}"</p>
+		</div>
+	</div>
+
+	<div id="demo">{{ fullName }}</div>
+
+	<div id="app-5">
+		<p>{{ message }}</p>
+		<button v-on:click="reverseMessage">Reverse Message</button>
+	</div>
+	
+	<div id="app-7">
+		<ol>
+			<!--
+				Now we provide each todo-item with the todo object
+				it's representing, so that its content can be dynamic.
+				We also need to provide each component with a "key",
+				which will be explained later.
+			-->
+			<todo-item v-bind:class="{ active: isActive }"
+				v-for="item in groceryList"
+				v-bind:todo="item"
+				v-bind:key="item.id"
+			></todo-item>
+		</ol>
+	</div>
+
+	<div id="freezExampleVista">
+		<span>{{msgControler.saludo}}</span>
+		<span>{{msgControler2.saludo}}</span>
+	</div>
+
+	<div id="d"><p>Content</p><p>Further Elaborated</p></div>
+
+	<div id="example-2">
+		<!-- `greet` is the name of a method defined below -->
+		<button v-on:click="warn('Form cannot be submitted yet.', $event)">
+			Submit
+		</button>
+		<button v-on:click.stop="doThis">Una vez</button>
+		<input v-on:keyup.enter="doThis">
+		<div @click.ctrl="doSomething">Control mas click para imprimir en consola</div>
+		<button-counter></button-counter>
+		<button-counter></button-counter>
+	</div>
+
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<script src="vue-example.js"></script>
+	<link rel="stylesheet" type="text/css" href="vue-example.css">
+  </body>
+</html>

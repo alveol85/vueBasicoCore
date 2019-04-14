@@ -1,0 +1,39 @@
+.active{
+    background-color: lightblue;
+    color: navy;
+}
+
+.text-danger{
+    background-color: rgb(173, 230, 182);
+    color: red;
+}
+
+.active2{
+    background-color: lightblue;
+    color: rgb(209, 24, 169);
+}
+
+.text-danger2{
+    background-color: rgb(173, 230, 182);
+    color: rgb(204, 41, 204);
+}
+
+.active3{
+    background-color: lightblue;
+    color: rgb(233, 211, 16);
+}
+
+.text-danger3{
+    background-color: rgb(173, 230, 182);
+    color: rgb(238, 255, 0);
+}
+
+.active4{
+    background-color: lightblue;
+    color: rgb(0, 128, 6);
+}
+
+.text-danger4{
+    background-color: rgb(173, 230, 182);
+    color: rgb(51, 255, 0);
+}
